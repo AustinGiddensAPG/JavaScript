@@ -26,15 +26,13 @@ var doSearch = function(array, targetValue) {
 			return -1;
 }
 //main (this is where the functions get called)
-var primes = [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97];
-var values = [100,400,200,1000,4,2,3,4,1];
-primes.sort();
-values.sort();
-var thePrime = 73;
-var result = doSearch(primes, thePrime);
-var result2 = doSearch(values, 200);
-console.log("Found prime"+thePrime+"at index"+result);
+var values = [100,400,200,1000,4,2,3,4,1,300,200,100,30,70,73];
+console.log("Before Search");
 console.log(values);
 values.sort(function(a, b){return a-b});
+//values.sort();
+console.log("After Search");
 console.log(values);
-console.log("Found value 200 at index"+result2);
+var searchValue = 30;
+var result = doSearch(values, searchValue);
+console.log("Found value "+searchValue+" at index "+result);
